@@ -35,8 +35,8 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
   
 // Replace with your network credentials
-//const char* ssid = "LAB_BIO_INGE";
-//const char* password = "A2E14BC248";
+//const char* ssid = "xxxxxx";
+//const char* password = "xxxxxx";
 
 const char* ssid = "PELLET";
 const char* password = "OPENBIOLAB";
