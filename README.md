@@ -20,6 +20,11 @@ step 6 :  each time you press "Enter" you will be able to process a new sample.
 
 When you want to start a new testset, press "r", then you will again have to add a reference sample. 
 
+The result is a csv file with following values :
+
+sampleID,picture_path,date,colour_info_dict["median_R"],colour_info_dict["median_G"],colour_info_dict["median_B"],reference_R,reference_G,reference_B
+
+All the pictures are stored in the output folder for later analyses
 
 
 ![image](https://github.com/mdequanter/pelletcam/assets/74420584/84da7697-67b3-45b2-b5c7-9df7ed83dc8c)
