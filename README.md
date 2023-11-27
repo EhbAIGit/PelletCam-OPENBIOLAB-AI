@@ -14,9 +14,13 @@ Off course you can change that passsord and SSID in the palletcamAP.ino file bef
 Step 1 :  Open a commandline and execute the pythonscript "python median_pixel_values_from_pictures.py"
 Step 2 :  provide the path where you want to store the resultfiles
 step 3 :  Place the reference pellet
-step 4 :  place the pellet to measure.
+step 4 :  click with your mouse on the center of the spot you want to measure.
+step 5 :  Now you can enter process a sample and select the spot.
+step 6 :  each time you press "Enter" you will be able to process a new sample.  
 
-The script will automatically calculate the 
+When you want to start a new testset, press "r", then you will again have to add a reference sample. 
+
+
 
 ![image](https://github.com/mdequanter/pelletcam/assets/74420584/84da7697-67b3-45b2-b5c7-9df7ed83dc8c)
 
