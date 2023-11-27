@@ -8,7 +8,7 @@ Lima pelletcamproject
 * palletcamAP.ino :  This is the sourcefile you need to install on the ESP32CAM.
   
 
-
+To launch the camera, First you need to connect to the WIFI access point 
 
 
 ![image](https://github.com/mdequanter/pelletcam/assets/74420584/84da7697-67b3-45b2-b5c7-9df7ed83dc8c)
