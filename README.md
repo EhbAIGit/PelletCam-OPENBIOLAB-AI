@@ -1,7 +1,7 @@
 # pelletcam
 Lima pelletcamproject
 
-
+# design and production
 
 * LaserCutterBox.ai :  This is the Photoshop illustrator file to use for your lasercutter.
 * ESP32SET.stl:  It contains all the files to 3D print the project
@@ -10,6 +10,13 @@ Lima pelletcamproject
 
 To launch the camera, First you need to connect to the WIFI access point ssid = "PELLET", with password "OPENBIOLAB";
 Off course you can change that passsord and SSID in the palletcamAP.ino file before uploading it to your ESP32CAM.
+
+Connections are as follows :
+
+![image](https://github.com/mdequanter/pelletcam/assets/74420584/6b70f90a-863b-4643-a1b7-81c548564fef)
+
+
+# How to use the software?
 
 Step 1 :  Open a commandline and execute the pythonscript "python median_pixel_values_from_pictures.py"
 Step 2 :  provide the path where you want to store the resultfiles
@@ -30,7 +37,7 @@ All the pictures are stored in the output folder for later analyses
 ![image](https://github.com/mdequanter/pelletcam/assets/74420584/84da7697-67b3-45b2-b5c7-9df7ed83dc8c)
 
 
-Some pictures :
+# Some pictures 
 
 ![20220310_065015_resized](https://github.com/mdequanter/pelletcam/assets/74420584/c54f9bf1-6c69-4060-ba23-52b73b9c86d0)
 
