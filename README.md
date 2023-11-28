@@ -4,7 +4,7 @@ Lima pelletcamproject
 # design and production
 
 * LaserCutterBox.ai :  This is the Photoshop illustrator file to use for your lasercutter.
-* ESP32SET.stl:  It contains all the files to 3D print the project
+* ESP32SET.stl:  It contains all the files to 3D print the project.  Use black PLA to print all parts
 * pelletcamAP.ino :  This is the sourcefile you need to install on the ESP32CAM.
   
 
