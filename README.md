@@ -5,11 +5,11 @@ Lima pelletcamproject
 
 * LaserCutterBox.ai :  This is the Photoshop illustrator file to use for your lasercutter.
 * ESP32SET.stl:  It contains all the files to 3D print the project
-* palletcamAP.ino :  This is the sourcefile you need to install on the ESP32CAM.
+* pelletcamAP.ino :  This is the sourcefile you need to install on the ESP32CAM.
   
 
 To launch the camera, First you need to connect to the WIFI access point ssid = "PELLET", with password "OPENBIOLAB";
-Off course you can change that passsord and SSID in the palletcamAP.ino file before uploading it to your ESP32CAM.
+Off course you can change that passsord and SSID in the pelletcamAP.ino file before uploading it to your ESP32CAM.
 
 Connections are as follows :
 
