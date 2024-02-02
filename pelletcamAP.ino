@@ -69,6 +69,15 @@ boolean takeNewPhoto = false;
 #define VSYNC_GPIO_NUM    25
 #define HREF_GPIO_NUM     23
 #define PCLK_GPIO_NUM     22
+  // Set the LED pin as an output
+#define LED_PIN           4
+
+int LED_PWM = 10;
+
+
+// setting PWM properties
+const int freq = 5000;
+const int ledChannel = 0;
 
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
@@ -88,12 +97,24 @@ const char index_html[] PROGMEM = R"rawliteral(
       <button onclick="rotatePhoto();">ROTATE</button>
       <button onclick="capturePhoto()">CAPTURE PHOTO</button>
       <button onclick="location.reload();">REFRESH PAGE</button>
+      <button onclick="ledplus()">LED MORE</button>
+      <button onclick="ledmin()">LED LESS</button>
     </p>
   </div>
   <div><img src="saved-photo" id="photo" width="70%"></div>
 </body>
 <script>
   var deg = 0;
+  function ledplus() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "/ledplus", true);
+    xhr.send();
+  }
+  function ledmin() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "/ledmin", true);
+    xhr.send();
+  }
   function capturePhoto() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', "/capture", true);
@@ -111,6 +132,38 @@ const char index_html[] PROGMEM = R"rawliteral(
 </html>)rawliteral";
 
 void setup() {
+  
+  ledcSetup(ledChannel, freq, 8);
+
+  // attach the channel to the GPIO to be controlled
+  ledcAttachPin(LED_PIN, ledChannel);
+
+  
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+  ledcWrite(ledChannel, 255);
+  delay(100);
+  ledcWrite(ledChannel, 0);
+  delay(100);
+
 
   #if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
   clock_prescale_set(clock_div_1);
@@ -137,6 +190,7 @@ void setup() {
     delay(500);
     Serial.println("SPIFFS mounted successfully");
   }
+
 
 
   // Turn-off the 'brownout detector'
@@ -191,6 +245,22 @@ void setup() {
     request->send_P(200, "text/plain", "Taking Photo");
   });
 
+server.on("/ledplus", HTTP_GET, [](AsyncWebServerRequest * request) {
+    LED_PWM += 50;
+    if (LED_PWM > 255) {
+      LED_PWM=255;
+    }
+    request->send_P(200, "text/html", index_html);
+  });
+
+server.on("/ledmin", HTTP_GET, [](AsyncWebServerRequest * request) {
+    LED_PWM -= 50;
+    if (LED_PWM<0) {
+      LED_PWM = 0;
+    }
+    request->send_P(200, "text/html", index_html);
+  });
+
   server.on("/saved-photo", HTTP_GET, [](AsyncWebServerRequest * request) {
     request->send(SPIFFS, FILE_PHOTO, "image/jpg", false);
   });
@@ -202,7 +272,11 @@ void setup() {
 
 void loop() {
   if (takeNewPhoto) {
+    ledcWrite(ledChannel, LED_PWM);
+    delay(100);
     capturePhotoSaveSpiffs();
+    delay(500);
+    ledcWrite(ledChannel, 0);
     takeNewPhoto = false;
   }
   delay(1);
