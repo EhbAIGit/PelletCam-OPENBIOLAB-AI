@@ -39,7 +39,7 @@ Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 //const char* password = "xxxxxx";
 
 const char* ssid = "PELLET";
-const char* password = "OPENBIOLAB";
+const char* password = "PELLETCAM";
 
 
 
@@ -70,7 +70,7 @@ boolean takeNewPhoto = false;
 #define HREF_GPIO_NUM     23
 #define PCLK_GPIO_NUM     22
   // Set the LED pin as an output
-#define LED_PIN           4
+#define LED_PIN           2
 
 int LED_PWM = 10;
 
