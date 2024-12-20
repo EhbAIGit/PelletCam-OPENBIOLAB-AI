@@ -18,12 +18,14 @@ Connections are as follows :
 
 # How to use the software?
 
-Step 1 :  Open a commandline and execute the pythonscript "python median_pixel_values_from_pictures.py"
+Step 1 :  Open a commandline and execute the pythonscript "pallet.py"
 Step 2 :  provide the path where you want to store the resultfiles
 step 3 :  Place the reference pellet
 step 4 :  click with your mouse on the center of the spot you want to measure.
 step 5 :  Now you can enter process a sample and select the spot.
 step 6 :  each time you press "Enter" you will be able to process a new sample.  
+
+You can also install those shortcuts on your laptop.  How to use this is described in the pdf MANUAL_PELLETCAM_2_1_EN.pdf
 
 When you want to start a new testset, press "r", then you will again have to add a reference sample. 
 
@@ -32,7 +34,6 @@ The result is a csv file with following values :
 sampleID,picture_path,date,colour_info_dict["median_R"],colour_info_dict["median_G"],colour_info_dict["median_B"],reference_R,reference_G,reference_B
 
 All the pictures are stored in the output folder for later analyses
-
 
 ![image](https://github.com/mdequanter/pelletcam/assets/74420584/84da7697-67b3-45b2-b5c7-9df7ed83dc8c)
 
