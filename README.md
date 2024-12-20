@@ -9,7 +9,7 @@ Additionally, the pellet cam is equipped with a lens that enables close-up imagi
 
 Another key advantage is the repeatability of experiments. With the closed system and specialized lens ensuring consistent measurement conditions, experiments can be reliably repeated with predictable and accurate results. This is crucial in both scientific research and quality control processes, where reliability and reproducibility are of utmost importance.
 
-In summary, by combining controlled lighting, a precise close-up lens, high accuracy, and repeatability, a closed microcontroller system offers a robust and efficient solution for color measurements in pellet tubes. It is an ideal choice for applications where precision and reliability are paramount.
+So, by combining controlled lighting, a precise close-up lens, high accuracy, and repeatability, a closed microcontroller system offers a robust and efficient solution for color measurements in pellet tubes. It is an ideal choice for applications where precision and reliability are paramount.
 
 
 # design and production
