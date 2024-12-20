@@ -1,7 +1,4 @@
-# pelletcam
-Lima pelletcamproject
-
-Advantages of a Closed Microcontroller System for Color Measurement
+# Advantages of the Pelletcam,  a Closed Microcontroller System for Color Measurement
 
 A closed microcontroller system with dedicated lighting offers significant advantages for accurately and reliably measuring color reactions in pellet tubes. By fully shielding the system from external influences such as ambient light, controlled and consistent lighting is ensured. This guarantees that every measurement is conducted under identical lighting conditions, eliminating disruptive variations.
 
